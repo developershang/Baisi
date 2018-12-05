@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="92" id="KGk-i7-Jjw" customClass="BMItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="91.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JkG-PC-nh6" userLabel="头像">
+                        <rect key="frame" x="20" y="21" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="0eQ-n0-i2a"/>
+                            <constraint firstAttribute="height" constant="50" id="gxw-BM-t5A"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyg-ZD-SUs" userLabel="订阅">
+                        <rect key="frame" x="80" y="21" width="42" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="kbt-8z-fQc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZK-TR-IHc" userLabel="订阅数">
+                        <rect key="frame" x="80" y="51" width="37.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="YY3-wI-L7c"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCv-0n-8Hm">
+                        <rect key="frame" x="313" y="33.5" width="51" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="+ 订阅" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="1" green="0.082627225260000006" blue="0.027263241269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="subscribtion:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MAZ-3d-rSf"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="pCv-0n-8Hm" secondAttribute="trailing" constant="20" id="5cj-tw-OlO"/>
+                    <constraint firstItem="IZK-TR-IHc" firstAttribute="bottom" secondItem="JkG-PC-nh6" secondAttribute="bottom" id="JCp-tl-Cn8"/>
+                    <constraint firstItem="IZK-TR-IHc" firstAttribute="leading" secondItem="JkG-PC-nh6" secondAttribute="trailing" constant="10" id="Kli-J4-ytL"/>
+                    <constraint firstItem="Fyg-ZD-SUs" firstAttribute="leading" secondItem="JkG-PC-nh6" secondAttribute="trailing" constant="10" id="S5g-BG-ijg"/>
+                    <constraint firstItem="Fyg-ZD-SUs" firstAttribute="top" secondItem="JkG-PC-nh6" secondAttribute="top" id="WMy-Jc-dNt"/>
+                    <constraint firstItem="JkG-PC-nh6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Wkx-VK-YV7"/>
+                    <constraint firstItem="JkG-PC-nh6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mJw-Lf-Igs"/>
+                    <constraint firstItem="pCv-0n-8Hm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mYF-Ma-JGn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconView" destination="JkG-PC-nh6" id="xOO-r2-7Gx"/>
+                <outlet property="subNumberLabel" destination="IZK-TR-IHc" id="5fo-G6-sv8"/>
+                <outlet property="themeNameLabel" destination="Fyg-ZD-SUs" id="i3h-gX-2cF"/>
+            </connections>
+            <point key="canvasLocation" x="-136" y="-109"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,68 @@
+//
+//  PrefixHeader.pch
+//  BaiSi
+//
+//  Created by developershang on 2017/5/15.
+//  Copyright © 2017年 developershang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#pragma mark - 此宏编译只会在OC文件中文件中编译
+
+/* ******OC文件中文件中的条件编译******* *///宏的build setting其他定义方式名字不能全部小写
+#ifdef __OBJC__
+
+
+
+//颜色相关
+#define BMAge 10
+
+#define BMColorA(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#define BMColor(r, g, b) BMColorA((r), (g), (b), 1.0)
+
+#define BMRandomColor BMColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#define BMFuncLog  NSLog(@"%s line = %d",__func__,__LINE__);
+
+
+
+#define testPath  @"/Users/developershang/Desktop/百思不得姐 4.5.6"
+
+#define BMScreenWidth [UIScreen mainScreen].bounds.size.width
+#define BMScreenHeight [UIScreen mainScreen].bounds.size.height
+#define BMContentLabelFont [UIFont systemFontOfSize:17]
+#define TopicContenLabelWidth (BMScreenWidth -20)
+
+#define iOSVersion [[UIDevice currentDevice].systemVersion doubleValue]
+
+//写入沙盒操作
+#define BM_WritetoFile(objc,fileName); [(objc) writeToFile:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:(fileName)] atomically:YES];
+
+#define BM_ReadFromFile(fileName) [NSDictionary dictionaryWithContentsOfFile:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:(fileName)]];
+
+
+
+//头文件相关
+#import "BMHeader.h"
+//Lib 相关
+#import "UIImageView+WebCache.h"
+#import "UIImage+BMExtension.h"
+#import "MJExtension.h"
+#import "SVProgressHUD.h"
+#import "MJRefresh.h"
+#import "AFNetworking.h"
+#import "BMHTTPSessionManager.h"
+
+#endif
+
+/* *******OC文件中文件中的条件编译******** */
+
+
+
+#endif /* PrefixHeader_pch */

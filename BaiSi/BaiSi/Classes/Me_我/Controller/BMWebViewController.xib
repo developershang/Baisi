@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BMWebViewController">
+            <connections>
+                <outlet property="Left" destination="M3M-aA-SWH" id="qTj-OP-RrQ"/>
+                <outlet property="Refresh" destination="FNE-k4-1e4" id="QLD-59-b7T"/>
+                <outlet property="Right" destination="AsA-2N-E58" id="vLe-F8-tpb"/>
+                <outlet property="WebView" destination="xy3-PW-gqV" id="hs1-DX-H0y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zQ-Ke-qCU">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Bhc-io-j4N"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem enabled="NO" systemItem="reply" id="M3M-aA-SWH">
+                            <connections>
+                                <action selector="LeftAction:" destination="-1" id="aC6-VV-9Zx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem enabled="NO" systemItem="play" id="AsA-2N-E58">
+                            <connections>
+                                <action selector="RightAction:" destination="-1" id="Eh3-ot-f75"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="oQ7-vE-Pj1"/>
+                        <barButtonItem enabled="NO" title="Item" systemItem="refresh" id="FNE-k4-1e4">
+                            <connections>
+                                <action selector="RefreshAction:" destination="-1" id="zQk-CY-kHy"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xy3-PW-gqV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="CjN-kW-BQK"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xy3-PW-gqV" secondAttribute="trailing" id="7aA-uQ-XLZ"/>
+                <constraint firstItem="xy3-PW-gqV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ayF-uk-YoB"/>
+                <constraint firstItem="xy3-PW-gqV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="d4K-qB-X6L"/>
+                <constraint firstAttribute="trailing" secondItem="7zQ-Ke-qCU" secondAttribute="trailing" id="fd7-1f-RhM"/>
+                <constraint firstItem="7zQ-Ke-qCU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vDW-Yg-90z"/>
+                <constraint firstItem="7zQ-Ke-qCU" firstAttribute="top" secondItem="xy3-PW-gqV" secondAttribute="bottom" id="vgu-tn-kjz"/>
+                <constraint firstAttribute="bottom" secondItem="7zQ-Ke-qCU" secondAttribute="bottom" id="vlY-WQ-cCy"/>
+            </constraints>
+            <point key="canvasLocation" x="127" y="-159"/>
+        </view>
+    </objects>
+</document>

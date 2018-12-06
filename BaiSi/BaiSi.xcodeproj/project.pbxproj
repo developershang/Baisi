@@ -812,7 +812,6 @@
 			isa = PBXGroup;
 			children = (
 				099EFE421ECD3CAC00D543B1 /* Controller */,
-				099EFE431ECD3CAC00D543B1 /* Model */,
 				099EFE441ECD3CAC00D543B1 /* View */,
 			);
 			path = "Login_登录";
@@ -826,13 +825,6 @@
 				099EFE7F1ECD3CEB00D543B1 /* BMLoginViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		099EFE431ECD3CAC00D543B1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		099EFE441ECD3CAC00D543B1 /* View */ = {

@@ -163,6 +163,7 @@
 		09DB10281EEBBC1300507DBB /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09DB10271EEBBC1300507DBB /* data.plist */; };
 		09DB10341EEE2C4700507DBB /* BMThirdLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DB10331EEE2C4700507DBB /* BMThirdLoginButton.m */; };
 		09DB104C1EEEA00400507DBB /* BMTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DB104B1EEEA00400507DBB /* BMTopicCell.m */; };
+		2D1A08E6DCEC50633DB49299 /* libPods-BaiSi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BA5F3F89EF998B5622A740 /* libPods-BaiSi.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -464,6 +465,9 @@
 		09DB10331EEE2C4700507DBB /* BMThirdLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMThirdLoginButton.m; sourceTree = "<group>"; };
 		09DB104A1EEEA00400507DBB /* BMTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTopicCell.h; sourceTree = "<group>"; };
 		09DB104B1EEEA00400507DBB /* BMTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BMTopicCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		65BA5F3F89EF998B5622A740 /* libPods-BaiSi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CBF7052A53D2005DBC5A913 /* Pods-BaiSi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSi.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSi/Pods-BaiSi.release.xcconfig"; sourceTree = "<group>"; };
+		E0090D5DBBF0276CC675547D /* Pods-BaiSi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSi/Pods-BaiSi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,6 +487,7 @@
 				09C744331F18CD3A00D3D59D /* UMSocialNetwork.framework in Frameworks */,
 				09C7442F1F18CD3A00D3D59D /* libSocialSina.a in Frameworks */,
 				09C744371F18CD3A00D3D59D /* UShareUI.framework in Frameworks */,
+				2D1A08E6DCEC50633DB49299 /* libPods-BaiSi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +550,7 @@
 				0917E2101EC5A3F600807A9D /* BaiSi */,
 				0917E20F1EC5A3F600807A9D /* Products */,
 				09C744381F18CECA00D3D59D /* Frameworks */,
+				668978F5863966B0845CF2D7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1343,8 +1349,18 @@
 				09C7443D1F18CF3C00D3D59D /* MessageUI.framework */,
 				09C7443B1F18CED600D3D59D /* CoreGraphics.framework */,
 				09C744391F18CECA00D3D59D /* libsqlite3.tbd */,
+				65BA5F3F89EF998B5622A740 /* libPods-BaiSi.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		668978F5863966B0845CF2D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0090D5DBBF0276CC675547D /* Pods-BaiSi.debug.xcconfig */,
+				7CBF7052A53D2005DBC5A913 /* Pods-BaiSi.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1354,6 +1370,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0917E2251EC5A3F600807A9D /* Build configuration list for PBXNativeTarget "BaiSi" */;
 			buildPhases = (
+				E500AE21C9E8A38EAA84091E /* [CP] Check Pods Manifest.lock */,
 				0917E20A1EC5A3F600807A9D /* Sources */,
 				0917E20B1EC5A3F600807A9D /* Frameworks */,
 				0917E20C1EC5A3F600807A9D /* Resources */,
@@ -1433,6 +1450,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E500AE21C9E8A38EAA84091E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaiSi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0917E20A1EC5A3F600807A9D /* Sources */ = {
@@ -1693,6 +1735,7 @@
 		};
 		0917E2261EC5A3F600807A9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0090D5DBBF0276CC675547D /* Pods-BaiSi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1735,6 +1778,7 @@
 		};
 		0917E2271EC5A3F600807A9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CBF7052A53D2005DBC5A913 /* Pods-BaiSi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

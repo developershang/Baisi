@@ -13,8 +13,8 @@
 - (void)awakeFromNib{
     
     [super awakeFromNib];
- //   self.backgroundColor = BMRandomColor;
- //   self.imageView.backgroundColor = BMRandomColor;
+  //   self.backgroundColor = BMRandomColor;
+  //  self.imageView.backgroundColor = BMRandomColor;
   //  self.titleLabel.backgroundColor = BMRandomColor;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     

@@ -17,7 +17,6 @@ static BMShareInstance *_shareInstance;
 
 @end
 
-
 @implementation BMShareInstance
 
 /** 保证对象只有一个 */
@@ -43,13 +42,11 @@ static BMShareInstance *_shareInstance;
 
 /** 操作数据库 FMDB */
 +(instancetype)shareDataBase{
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _shareInstance = [[BMShareInstance alloc] init];
         // 初始化数据库
         [_shareInstance initDataBase];
-        
     });
     return _shareInstance;
     

@@ -21,7 +21,7 @@ static BMShareDataBase *_shareDataBase;
 
 @implementation BMShareDataBase
 
-#pragma mark - 创建单例，初始化数据库
+#pragma mark - 数据库管理
 
 +(instancetype)allocWithZone:(struct _NSZone *)zone{
     
@@ -30,7 +30,6 @@ static BMShareDataBase *_shareDataBase;
         _shareDataBase = [super allocWithZone:zone];
 
     });
-    
     
     return _shareDataBase;
 }
@@ -158,8 +157,6 @@ static BMShareDataBase *_shareDataBase;
     
     [_db close];
     
-    
-    
     return dataArray;
     
 }
@@ -185,10 +182,7 @@ static BMShareDataBase *_shareDataBase;
     
     [_db close];
     
-    
-    
     return dataArray;
-    
     
 }
 

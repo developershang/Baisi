@@ -22,8 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    self.WebView.scrollView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+   self.automaticallyAdjustsScrollViewInsets = NO;
+  // self.WebView.scrollView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     [self.WebView loadRequest:[NSURLRequest requestWithURL:self.url]];
 }
 
